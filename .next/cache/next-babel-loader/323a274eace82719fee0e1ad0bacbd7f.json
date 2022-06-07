@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "var _this = this,\n    _jsxFileName = \"/Users/jomicega/projects/courses/pl/nextJs/components/Layout/Layout.tsx\";\n\nimport _JSXStyle from \"styled-jsx/style\";\nvar __jsx = React.createElement;\nimport React from 'react';\nimport Navbar from '@components/Navbar/Navbar';\nimport Footer from '@components/Footer/Footer'; // path aliases -- TS\n// import Styles from './layout.module.css'\n\nvar Layout = function Layout(_ref) {\n  var children = _ref.children;\n  return __jsx(\"div\", {\n    className: \"jsx-3840703183\",\n    __self: _this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 10,\n      columnNumber: 5\n    }\n  }, __jsx(Navbar, {\n    __self: _this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 11,\n      columnNumber: 7\n    }\n  }), children, __jsx(Footer, {\n    __self: _this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 13,\n      columnNumber: 7\n    }\n  }), __jsx(_JSXStyle, {\n    id: \"3840703183\",\n    __self: _this\n  }, \"div.jsx-3840703183{background:yellow;}\\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qb21pY2VnYS9wcm9qZWN0cy9jb3Vyc2VzL3BsL25leHRKcy9jb21wb25lbnRzL0xheW91dC9MYXlvdXQudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWFrQixBQUkrQixrQkFDcEIiLCJmaWxlIjoiL1VzZXJzL2pvbWljZWdhL3Byb2plY3RzL2NvdXJzZXMvcGwvbmV4dEpzL2NvbXBvbmVudHMvTGF5b3V0L0xheW91dC50c3giLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnXG5pbXBvcnQgTmF2YmFyIGZyb20gJ0Bjb21wb25lbnRzL05hdmJhci9OYXZiYXInXG5pbXBvcnQgRm9vdGVyIGZyb20gJ0Bjb21wb25lbnRzL0Zvb3Rlci9Gb290ZXInXG4vLyBwYXRoIGFsaWFzZXMgLS0gVFNcblxuLy8gaW1wb3J0IFN0eWxlcyBmcm9tICcuL2xheW91dC5tb2R1bGUuY3NzJ1xuXG5jb25zdCBMYXlvdXQ6IFJlYWN0LkZDID0gKHsgY2hpbGRyZW4gfSkgPT4ge1xuICByZXR1cm4gKFxuICAgIDxkaXY+XG4gICAgICA8TmF2YmFyIC8+XG4gICAgICB7Y2hpbGRyZW59XG4gICAgICA8Rm9vdGVyIC8+XG4gICAgICA8c3R5bGUganN4PntgXG4gICAgICAgICB7XG4gICAgICAgICAgZGl2IHtcbiAgICAgICAgICAgIGJhY2tncm91bmQ6IHllbGxvdztcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIGB9PC9zdHlsZT5cbiAgICA8L2Rpdj5cbiAgKVxufVxuXG5leHBvcnQgZGVmYXVsdCBMYXlvdXRcbiJdfQ== */\\n/*@ sourceURL=/Users/jomicega/projects/courses/pl/nextJs/components/Layout/Layout.tsx */\"));\n};\n\n_c = Layout;\nexport default Layout;\n\nvar _c;\n\n$RefreshReg$(_c, \"Layout\");",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/jomicega/projects/courses/pl/nextJs/components/Layout/Layout.tsx"
+    ],
+    "names": ["React", "Navbar", "Footer", "Layout", "children"],
+    "mappings": ";;;;;AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,OAAOC,MAAP,MAAmB,2BAAnB;AACA,OAAOC,MAAP,MAAmB,2BAAnB,C,CACA;AAEA;;AAEA,IAAMC,MAAgB,GAAG,SAAnBA,MAAmB,OAAkB;AAAA,MAAfC,QAAe,QAAfA,QAAe;AACzC,SACE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACE,MAAC,MAAD;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IADF,EAEGA,QAFH,EAGE,MAAC,MAAD;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IAHF;AAAA;AAAA;AAAA,kqCADF;AAcD,CAfD;;KAAMD,M;AAiBN,eAAeA,MAAf",
+    "sourcesContent": [
+      "import React from 'react'\nimport Navbar from '@components/Navbar/Navbar'\nimport Footer from '@components/Footer/Footer'\n// path aliases -- TS\n\n// import Styles from './layout.module.css'\n\nconst Layout: React.FC = ({ children }) => {\n  return (\n    <div>\n      <Navbar />\n      {children}\n      <Footer />\n      <style jsx>{`\n         {\n          div {\n            background: yellow;\n          }\n        }\n      `}</style>\n    </div>\n  )\n}\n\nexport default Layout\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

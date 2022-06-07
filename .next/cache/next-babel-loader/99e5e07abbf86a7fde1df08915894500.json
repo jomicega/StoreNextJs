@@ -1,0 +1,34 @@
+{
+  "ast": null,
+  "code": "var _this = this,\n    _jsxFileName = \"/Users/jomicega/projects/courses/pl/nextJs/pages/index.tsx\",\n    _s = $RefreshSig$();\n\nvar __jsx = React.createElement;\nimport React, { useEffect, useState } from 'react';\nimport Navbar from '../components/Navbar/Navbar';\n\nvar HomePage = function HomePage() {\n  _s();\n\n  var _useState = useState([]),\n      productList = _useState[0],\n      setProductList = _useState[1];\n\n  useEffect(function () {\n    window.fetch('/api/avo').then(function (response) {\n      return response.json();\n    }).then(function (_ref) {\n      var data = _ref.data,\n          length = _ref.length;\n      return setProductList(data);\n    });\n  }, []);\n  return __jsx(\"div\", {\n    __self: _this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 14,\n      columnNumber: 5\n    }\n  }, __jsx(Navbar, {\n    __self: _this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 15,\n      columnNumber: 7\n    }\n  }), __jsx(\"div\", {\n    __self: _this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 16,\n      columnNumber: 7\n    }\n  }, \"Platzi and Next.js!\"), productList.map(function (product) {\n    return __jsx(\"div\", {\n      key: product.id,\n      __self: _this,\n      __source: {\n        fileName: _jsxFileName,\n        lineNumber: 18,\n        columnNumber: 9\n      }\n    }, product.name);\n  }));\n};\n\n_s(HomePage, \"OqBFtcRPuEK5n5yG0OhgJizsaa8=\");\n\n_c = HomePage;\nexport default HomePage;\n\nvar _c;\n\n$RefreshReg$(_c, \"HomePage\");",
+  "map": {
+    "version": 3,
+    "sources": ["/Users/jomicega/projects/courses/pl/nextJs/pages/index.tsx"],
+    "names": [
+      "React",
+      "useEffect",
+      "useState",
+      "Navbar",
+      "HomePage",
+      "productList",
+      "setProductList",
+      "window",
+      "fetch",
+      "then",
+      "response",
+      "json",
+      "data",
+      "length",
+      "map",
+      "product",
+      "id",
+      "name"
+    ],
+    "mappings": ";;;;;AAAA,OAAOA,KAAP,IAAgBC,SAAhB,EAA2BC,QAA3B,QAA2C,OAA3C;AACA,OAAOC,MAAP,MAAmB,6BAAnB;;AAEA,IAAMC,QAAQ,GAAG,SAAXA,QAAW,GAAM;AAAA;;AAAA,kBACiBF,QAAQ,CAAa,EAAb,CADzB;AAAA,MACdG,WADc;AAAA,MACDC,cADC;;AAGrBL,EAAAA,SAAS,CAAC,YAAM;AACdM,IAAAA,MAAM,CACHC,KADH,CACS,UADT,EAEGC,IAFH,CAEQ,UAACC,QAAD;AAAA,aAAcA,QAAQ,CAACC,IAAT,EAAd;AAAA,KAFR,EAGGF,IAHH,CAGQ;AAAA,UAAGG,IAAH,QAAGA,IAAH;AAAA,UAASC,MAAT,QAASA,MAAT;AAAA,aAAsBP,cAAc,CAACM,IAAD,CAApC;AAAA,KAHR;AAID,GALQ,EAKN,EALM,CAAT;AAMA,SACE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACE,MAAC,MAAD;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IADF,EAEE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,2BAFF,EAGGP,WAAW,CAACS,GAAZ,CAAgB,UAACC,OAAD;AAAA,WACf;AAAK,MAAA,GAAG,EAAEA,OAAO,CAACC,EAAlB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,OAAuBD,OAAO,CAACE,IAA/B,CADe;AAAA,GAAhB,CAHH,CADF;AASD,CAlBD;;GAAMb,Q;;KAAAA,Q;AAoBN,eAAeA,QAAf",
+    "sourcesContent": [
+      "import React, { useEffect, useState } from 'react'\nimport Navbar from '../components/Navbar/Navbar'\n\nconst HomePage = () => {\n  const [productList, setProductList] = useState<TProduct[]>([])\n\n  useEffect(() => {\n    window\n      .fetch('/api/avo')\n      .then((response) => response.json())\n      .then(({ data, length }) => setProductList(data))\n  }, [])\n  return (\n    <div>\n      <Navbar />\n      <div>Platzi and Next.js!</div>\n      {productList.map((product) => (\n        <div key={product.id}>{product.name}</div>\n      ))}\n    </div>\n  )\n}\n\nexport default HomePage\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

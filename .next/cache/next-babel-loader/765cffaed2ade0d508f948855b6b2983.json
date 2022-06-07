@@ -1,0 +1,38 @@
+{
+  "ast": null,
+  "code": "var _jsxFileName = \"/Users/jomicega/projects/courses/pl/nextJs/pages/product/[id].tsx\";\nvar __jsx = React.createElement;\nimport React, { useEffect, useState } from 'react';\nimport { useRouter } from 'next/router';\n\nconst ProductPage = () => {\n  const {\n    query\n  } = useRouter();\n  const {\n    0: product,\n    1: setProduct\n  } = useState();\n  const url = `/api/avo/${query.id}`;\n  console.log('🚀 ~ file: [id].tsx ~ line 9 ~ ProductPage ~ url', url);\n  useEffect(() => {\n    window.fetch(url).then(response => response.json()).then(console.log); // .then(({ data, length }) => setProduct(data))\n  }, []);\n  console.log('🚀 ~ file: [id].tsx ~ line 7 ~ ProductPage ~ product', product);\n  return __jsx(\"section\", {\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 21,\n      columnNumber: 5\n    }\n  }, __jsx(\"h1\", {\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 22,\n      columnNumber: 7\n    }\n  }, \"P\\xE1gina producto: \", product === null || product === void 0 ? void 0 : product.name), JSON.stringify({\n    product\n  }));\n};\n\nexport default ProductPage;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/jomicega/projects/courses/pl/nextJs/pages/product/[id].tsx"
+    ],
+    "names": [
+      "React",
+      "useEffect",
+      "useState",
+      "useRouter",
+      "ProductPage",
+      "query",
+      "product",
+      "setProduct",
+      "url",
+      "id",
+      "console",
+      "log",
+      "window",
+      "fetch",
+      "then",
+      "response",
+      "json",
+      "name",
+      "JSON",
+      "stringify"
+    ],
+    "mappings": ";;AAAA,OAAOA,KAAP,IAAgBC,SAAhB,EAA2BC,QAA3B,QAA2C,OAA3C;AACA,SAASC,SAAT,QAA0B,aAA1B;;AAEA,MAAMC,WAAW,GAAG,MAAM;AACxB,QAAM;AAAEC,IAAAA;AAAF,MAAYF,SAAS,EAA3B;AACA,QAAM;AAAA,OAACG,OAAD;AAAA,OAAUC;AAAV,MAAwBL,QAAQ,EAAtC;AAEA,QAAMM,GAAG,GAAI,YAAWH,KAAK,CAACI,EAAG,EAAjC;AACAC,EAAAA,OAAO,CAACC,GAAR,CAAY,kDAAZ,EAAgEH,GAAhE;AAEAP,EAAAA,SAAS,CAAC,MAAM;AACdW,IAAAA,MAAM,CACHC,KADH,CACSL,GADT,EAEGM,IAFH,CAESC,QAAD,IAAcA,QAAQ,CAACC,IAAT,EAFtB,EAGGF,IAHH,CAGQJ,OAAO,CAACC,GAHhB,EADc,CAKd;AACD,GANQ,EAMN,EANM,CAAT;AAQAD,EAAAA,OAAO,CAACC,GAAR,CAAY,sDAAZ,EAAoEL,OAApE;AACA,SACE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,6BAAsBA,OAAtB,aAAsBA,OAAtB,uBAAsBA,OAAO,CAAEW,IAA/B,CADF,EAEGC,IAAI,CAACC,SAAL,CAAe;AAAEb,IAAAA;AAAF,GAAf,CAFH,CADF;AAMD,CAtBD;;AAwBA,eAAeF,WAAf",
+    "sourcesContent": [
+      "import React, { useEffect, useState } from 'react'\nimport { useRouter } from 'next/router'\n\nconst ProductPage = () => {\n  const { query } = useRouter()\n  const [product, setProduct] = useState<TProduct>()\n\n  const url = `/api/avo/${query.id}`\n  console.log('🚀 ~ file: [id].tsx ~ line 9 ~ ProductPage ~ url', url)\n\n  useEffect(() => {\n    window\n      .fetch(url)\n      .then((response) => response.json())\n      .then(console.log)\n    // .then(({ data, length }) => setProduct(data))\n  }, [])\n\n  console.log('🚀 ~ file: [id].tsx ~ line 7 ~ ProductPage ~ product', product)\n  return (\n    <section>\n      <h1>Página producto: {product?.name}</h1>\n      {JSON.stringify({ product })}\n    </section>\n  )\n}\n\nexport default ProductPage\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

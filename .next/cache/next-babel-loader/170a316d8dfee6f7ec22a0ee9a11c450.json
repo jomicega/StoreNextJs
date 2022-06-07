@@ -1,0 +1,30 @@
+{
+  "ast": null,
+  "code": "import DB from '@database';\n\nconst allAvos = async (request, response) => {\n  const db = new DB();\n  const allEntries = await db.getAll();\n  response.statusCode = 200;\n  response.setHeader({\n    'Content-type': 'application/json'\n  });\n  response.end(JSON.stringify(allEntries));\n};\n\nexport default allAvos;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/jomicega/projects/courses/pl/nextJs/pages/api/avo/index.ts"
+    ],
+    "names": [
+      "DB",
+      "allAvos",
+      "request",
+      "response",
+      "db",
+      "allEntries",
+      "getAll",
+      "statusCode",
+      "setHeader",
+      "end",
+      "JSON",
+      "stringify"
+    ],
+    "mappings": "AACA,OAAOA,EAAP,MAAe,WAAf;;AAEA,MAAMC,OAAO,GAAG,OAAOC,OAAP,EAAiCC,QAAjC,KAA8D;AAC5E,QAAMC,EAAE,GAAG,IAAIJ,EAAJ,EAAX;AACA,QAAMK,UAAU,GAAG,MAAMD,EAAE,CAACE,MAAH,EAAzB;AAEAH,EAAAA,QAAQ,CAACI,UAAT,GAAsB,GAAtB;AACAJ,EAAAA,QAAQ,CAACK,SAAT,CAAmB;AAAE,oBAAgB;AAAlB,GAAnB;AACAL,EAAAA,QAAQ,CAACM,GAAT,CAAaC,IAAI,CAACC,SAAL,CAAeN,UAAf,CAAb;AACD,CAPD;;AASA,eAAeJ,OAAf",
+    "sourcesContent": [
+      "import { IncomingMessage, ServerResponse } from 'http'\nimport DB from '@database'\n\nconst allAvos = async (request: IncomingMessage, response: ServerResponse) => {\n  const db = new DB()\n  const allEntries = await db.getAll()\n\n  response.statusCode = 200\n  response.setHeader({ 'Content-type': 'application/json' })\n  response.end(JSON.stringify(allEntries))\n}\n\nexport default allAvos\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

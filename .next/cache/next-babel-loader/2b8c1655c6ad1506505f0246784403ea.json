@@ -1,0 +1,29 @@
+{
+  "ast": null,
+  "code": "const getAvo = async (request, response) => {\n  const id = request.query.id; // const db = new DB()\n  // const getEntry = await db.getById(id)\n\n  response.statusCode = 200;\n  response.setHeader('Content-type', 'application/json');\n  response.end(JSON.stringify({\n    data: id\n  }));\n};\n\nexport default getAvo;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/jomicega/projects/courses/pl/nextJs/pages/api/avo/[id].ts"
+    ],
+    "names": [
+      "getAvo",
+      "request",
+      "response",
+      "id",
+      "query",
+      "statusCode",
+      "setHeader",
+      "end",
+      "JSON",
+      "stringify",
+      "data"
+    ],
+    "mappings": "AAGA,MAAMA,MAAM,GAAG,OAAOC,OAAP,EAAgCC,QAAhC,KAA8D;AAC3E,QAAMC,EAAE,GAAGF,OAAO,CAACG,KAAR,CAAcD,EAAzB,CAD2E,CAG3E;AACA;;AACAD,EAAAA,QAAQ,CAACG,UAAT,GAAsB,GAAtB;AACAH,EAAAA,QAAQ,CAACI,SAAT,CAAmB,cAAnB,EAAmC,kBAAnC;AACAJ,EAAAA,QAAQ,CAACK,GAAT,CAAaC,IAAI,CAACC,SAAL,CAAe;AAAEC,IAAAA,IAAI,EAAEP;AAAR,GAAf,CAAb;AACD,CARD;;AAUA,eAAeH,MAAf",
+    "sourcesContent": [
+      "import { NextApiRequest, NextApiResponse } from 'next'\nimport DB from '@database'\n\nconst getAvo = async (request: NextApiRequest, response: NextApiResponse) => {\n  const id = request.query.id\n\n  // const db = new DB()\n  // const getEntry = await db.getById(id)\n  response.statusCode = 200\n  response.setHeader('Content-type', 'application/json')\n  response.end(JSON.stringify({ data: id }))\n}\n\nexport default getAvo\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

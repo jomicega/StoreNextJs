@@ -1,0 +1,33 @@
+{
+  "ast": null,
+  "code": "import DB from '@database';\nimport { useRouter } from 'next/router';\n\nconst getAvo = async (request, response) => {\n  const router = useRouter();\n  const id = request.query.id;\n  const db = new DB(); // const getEntry = await db.getById(id)\n\n  response.statusCode = 200;\n  response.setHeader('Content-type', 'application/json');\n  response.end(JSON.stringify({\n    data: id\n  }));\n};\n\nexport default getAvo;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/jomicega/projects/courses/pl/nextJs/pages/api/avo/[id].ts"
+    ],
+    "names": [
+      "DB",
+      "useRouter",
+      "getAvo",
+      "request",
+      "response",
+      "router",
+      "id",
+      "query",
+      "db",
+      "statusCode",
+      "setHeader",
+      "end",
+      "JSON",
+      "stringify",
+      "data"
+    ],
+    "mappings": "AACA,OAAOA,EAAP,MAAe,WAAf;AACA,SAASC,SAAT,QAA0B,aAA1B;;AAEA,MAAMC,MAAM,GAAG,OAAOC,OAAP,EAAgCC,QAAhC,KAA8D;AAC3E,QAAMC,MAAM,GAAGJ,SAAS,EAAxB;AAEA,QAAMK,EAAE,GAAGH,OAAO,CAACI,KAAR,CAAcD,EAAzB;AAEA,QAAME,EAAE,GAAG,IAAIR,EAAJ,EAAX,CAL2E,CAM3E;;AACAI,EAAAA,QAAQ,CAACK,UAAT,GAAsB,GAAtB;AACAL,EAAAA,QAAQ,CAACM,SAAT,CAAmB,cAAnB,EAAmC,kBAAnC;AACAN,EAAAA,QAAQ,CAACO,GAAT,CAAaC,IAAI,CAACC,SAAL,CAAe;AAAEC,IAAAA,IAAI,EAAER;AAAR,GAAf,CAAb;AACD,CAVD;;AAYA,eAAeJ,MAAf",
+    "sourcesContent": [
+      "import { NextApiRequest, NextApiResponse } from 'next'\nimport DB from '@database'\nimport { useRouter } from 'next/router'\n\nconst getAvo = async (request: NextApiRequest, response: NextApiResponse) => {\n  const router = useRouter()\n\n  const id = request.query.id\n\n  const db = new DB()\n  // const getEntry = await db.getById(id)\n  response.statusCode = 200\n  response.setHeader('Content-type', 'application/json')\n  response.end(JSON.stringify({ data: id }))\n}\n\nexport default getAvo\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

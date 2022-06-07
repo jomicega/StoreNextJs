@@ -1,0 +1,35 @@
+{
+  "ast": null,
+  "code": "import DB from '@database';\n\nconst getAvo = async (request, response) => {\n  const db = new DB();\n  console.log('process...');\n  const id = request.query.id;\n  const entry = await db.getById(id);\n  response.statusCode = 200;\n  response.setHeader('Content-type', 'application/json');\n  response.end(JSON.stringify({\n    data: entry\n  }));\n};\n\nexport default getAvo;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/jomicega/projects/courses/pl/nextJs/pages/api/avo/[id].ts"
+    ],
+    "names": [
+      "DB",
+      "getAvo",
+      "request",
+      "response",
+      "db",
+      "console",
+      "log",
+      "id",
+      "query",
+      "entry",
+      "getById",
+      "statusCode",
+      "setHeader",
+      "end",
+      "JSON",
+      "stringify",
+      "data"
+    ],
+    "mappings": "AACA,OAAOA,EAAP,MAAe,WAAf;;AAEA,MAAMC,MAAM,GAAG,OAAOC,OAAP,EAAgCC,QAAhC,KAA8D;AAC3E,QAAMC,EAAE,GAAG,IAAIJ,EAAJ,EAAX;AAEAK,EAAAA,OAAO,CAACC,GAAR,CAAY,YAAZ;AACA,QAAMC,EAAE,GAAGL,OAAO,CAACM,KAAR,CAAcD,EAAzB;AAEA,QAAME,KAAK,GAAG,MAAML,EAAE,CAACM,OAAH,CAAWH,EAAX,CAApB;AACAJ,EAAAA,QAAQ,CAACQ,UAAT,GAAsB,GAAtB;AACAR,EAAAA,QAAQ,CAACS,SAAT,CAAmB,cAAnB,EAAmC,kBAAnC;AACAT,EAAAA,QAAQ,CAACU,GAAT,CAAaC,IAAI,CAACC,SAAL,CAAe;AAAEC,IAAAA,IAAI,EAAEP;AAAR,GAAf,CAAb;AACD,CAVD;;AAYA,eAAeR,MAAf",
+    "sourcesContent": [
+      "import { NextApiRequest, NextApiResponse } from 'next'\nimport DB from '@database'\n\nconst getAvo = async (request: NextApiRequest, response: NextApiResponse) => {\n  const db = new DB()\n\n  console.log('process...')\n  const id = request.query.id\n\n  const entry = await db.getById(id as string)\n  response.statusCode = 200\n  response.setHeader('Content-type', 'application/json')\n  response.end(JSON.stringify({ data: entry }))\n}\n\nexport default getAvo\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

@@ -1,0 +1,22 @@
+{
+  "ast": null,
+  "code": "var _this = this,\n    _jsxFileName = \"/Users/jomicega/projects/courses/pl/nextJs/pages/index.tsx\",\n    _s = $RefreshSig$();\n\nvar __jsx = React.createElement;\nimport React, { useState } from 'react';\nimport Navbar from '../components/Navbar/Navbar';\n\nvar HomePage = function HomePage() {\n  _s();\n\n  var _useState = useState([]),\n      productList = _useState[0],\n      setProductList = _useState[1];\n\n  return __jsx(\"div\", {\n    __self: _this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 7,\n      columnNumber: 5\n    }\n  }, __jsx(Navbar, {\n    __self: _this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 8,\n      columnNumber: 7\n    }\n  }), __jsx(\"div\", {\n    __self: _this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 9,\n      columnNumber: 7\n    }\n  }, \"Platzi and Next.js!\"));\n};\n\n_s(HomePage, \"J2RYfP5Tb+sRKsQ7fA4tQxZxJ/s=\");\n\n_c = HomePage;\nexport default HomePage;\n\nvar _c;\n\n$RefreshReg$(_c, \"HomePage\");",
+  "map": {
+    "version": 3,
+    "sources": ["/Users/jomicega/projects/courses/pl/nextJs/pages/index.tsx"],
+    "names": [
+      "React",
+      "useState",
+      "Navbar",
+      "HomePage",
+      "productList",
+      "setProductList"
+    ],
+    "mappings": ";;;;;AAAA,OAAOA,KAAP,IAAgBC,QAAhB,QAAgC,OAAhC;AACA,OAAOC,MAAP,MAAmB,6BAAnB;;AAEA,IAAMC,QAAQ,GAAG,SAAXA,QAAW,GAAM;AAAA;;AAAA,kBACiBF,QAAQ,CAAC,EAAD,CADzB;AAAA,MACdG,WADc;AAAA,MACDC,cADC;;AAErB,SACE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACE,MAAC,MAAD;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IADF,EAEE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,2BAFF,CADF;AAMD,CARD;;GAAMF,Q;;KAAAA,Q;AAUN,eAAeA,QAAf",
+    "sourcesContent": [
+      "import React, { useState } from 'react'\nimport Navbar from '../components/Navbar/Navbar'\n\nconst HomePage = () => {\n  const [productList, setProductList] = useState([])\n  return (\n    <div>\n      <Navbar />\n      <div>Platzi and Next.js!</div>\n    </div>\n  )\n}\n\nexport default HomePage\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

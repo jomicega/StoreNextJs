@@ -1,0 +1,33 @@
+{
+  "ast": null,
+  "code": "import DB from '@database';\nimport { useRouter } from 'next/router';\n\nconst getAvo = async (request, response) => {\n  const router = useRouter();\n  const {\n    id\n  } = request.query;\n\n  if (id) {\n    const db = new DB(); // const getEntry = await db.getById(id)\n\n    response.statusCode = 200;\n    response.setHeader('Content-type', 'application/json');\n    response.end(JSON.stringify({\n      data: id\n    }));\n  } else {\n    response.statusCode = 400;\n    response.setHeader('Content-type', 'application/json');\n    response.end(JSON.stringify({\n      data: id\n    }));\n  }\n};\n\nexport default getAvo;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/jomicega/projects/courses/pl/nextJs/pages/api/avo/[id].ts"
+    ],
+    "names": [
+      "DB",
+      "useRouter",
+      "getAvo",
+      "request",
+      "response",
+      "router",
+      "id",
+      "query",
+      "db",
+      "statusCode",
+      "setHeader",
+      "end",
+      "JSON",
+      "stringify",
+      "data"
+    ],
+    "mappings": "AACA,OAAOA,EAAP,MAAe,WAAf;AACA,SAASC,SAAT,QAA0B,aAA1B;;AAEA,MAAMC,MAAM,GAAG,OAAOC,OAAP,EAAgCC,QAAhC,KAA8D;AAC3E,QAAMC,MAAM,GAAGJ,SAAS,EAAxB;AAEA,QAAM;AAAEK,IAAAA;AAAF,MAASH,OAAO,CAACI,KAAvB;;AAEA,MAAID,EAAJ,EAAQ;AACN,UAAME,EAAE,GAAG,IAAIR,EAAJ,EAAX,CADM,CAEN;;AACAI,IAAAA,QAAQ,CAACK,UAAT,GAAsB,GAAtB;AACAL,IAAAA,QAAQ,CAACM,SAAT,CAAmB,cAAnB,EAAmC,kBAAnC;AACAN,IAAAA,QAAQ,CAACO,GAAT,CAAaC,IAAI,CAACC,SAAL,CAAe;AAAEC,MAAAA,IAAI,EAAER;AAAR,KAAf,CAAb;AACD,GAND,MAMO;AACLF,IAAAA,QAAQ,CAACK,UAAT,GAAsB,GAAtB;AACAL,IAAAA,QAAQ,CAACM,SAAT,CAAmB,cAAnB,EAAmC,kBAAnC;AACAN,IAAAA,QAAQ,CAACO,GAAT,CAAaC,IAAI,CAACC,SAAL,CAAe;AAAEC,MAAAA,IAAI,EAAER;AAAR,KAAf,CAAb;AACD;AACF,CAhBD;;AAkBA,eAAeJ,MAAf",
+    "sourcesContent": [
+      "import { NextApiRequest, NextApiResponse } from 'next'\nimport DB from '@database'\nimport { useRouter } from 'next/router'\n\nconst getAvo = async (request: NextApiRequest, response: NextApiResponse) => {\n  const router = useRouter()\n\n  const { id } = request.query\n\n  if (id) {\n    const db = new DB()\n    // const getEntry = await db.getById(id)\n    response.statusCode = 200\n    response.setHeader('Content-type', 'application/json')\n    response.end(JSON.stringify({ data: id }))\n  } else {\n    response.statusCode = 400\n    response.setHeader('Content-type', 'application/json')\n    response.end(JSON.stringify({ data: id }))\n  }\n}\n\nexport default getAvo\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}
