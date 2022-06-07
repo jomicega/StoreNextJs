@@ -5,7 +5,7 @@ import ProductList from '@components/ProductList/ProductList'
 
 const HomePage = () => {
   const [productList, setProductList] = useState<TProduct[]>([])
-
+  console.log('Aquí test')
   useEffect(() => {
     window
       .fetch('/api/avo')
